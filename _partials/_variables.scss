@@ -1,0 +1,29 @@
+$font-family-sans-serif:  'Montserrat', Arial, sans-serif;
+$primary: #2B84F0;
+$secondary: #EEEEEE;
+$dark: #404040;
+$link-color: $primary;
+
+$grid-gutter-width: 30px;
+
+$preto: #404040;
+$branco: #ffffff;
+$azul_claro: #2B84F0;
+$azul_escuro: #041F49;
+$cinza_claro: #EEEEEE;
+$azul_medio: #2769C1;
+
+// Customizando o modal
+$modal-backdrop-bg: $primary;
+$modal-backdrop-opacity: 1;
+
+//Custom hamburger icon
+$hamburger-layer-width         : 35px;
+$hamburger-layer-height        : 6px;
+$hamburger-layer-spacing       : 4px;
+$hamburger-layer-color         : $branco;
+$hamburger-layer-border-radius : 0;
+$hamburger-hover-opacity       : 1;
+$hamburger-types: (
+  slider,
+);

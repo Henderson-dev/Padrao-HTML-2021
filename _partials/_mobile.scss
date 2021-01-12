@@ -1,0 +1,158 @@
+// padrões iniciais
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+strong,
+b {
+  color: #2B84F0;
+  font-weight: 700;
+}
+p {
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 0;
+}
+.btn:focus{
+  outline: none;
+  box-shadow: none;
+  text-decoration: none;
+}
+
+//Menu Principal
+.main-menu {
+  @extend .navbar, .navbar-expand-lg, .navbar-dark, .w-100;
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  background-color: transparent;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  .navbar-brand {
+    z-index: 2;
+    img {
+      width: 114px;
+      height: 41.52px;
+    }
+  }
+  .navbar-nav {
+    &:nth-child(2), &:nth-child(3){
+      flex-flow: row;  
+    }
+    &:nth-child(3) {
+      color: $branco;
+      margin-top: 5px;
+      .nav-item{
+        font-size: 14px;
+      }
+    }
+  }
+  .hamburger {
+    z-index: 2;
+  }
+
+  button:focus {
+    outline: none;
+  }
+  //Important: integrating hamburger icon with bootstrap navbar
+  button[aria-expanded=true]{
+    @extend .is-active;
+  }
+  .navbar-collapse{
+    padding-top: 150px;
+  }
+  .nav-item{
+    font-size: 26px;
+  }
+  .navbar-nav:first-child{
+    margin-bottom: 70px;
+  }
+
+  @include media-breakpoint-down(md) {
+    .navbar-collapse {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      z-index: 1;
+      background-color: $primary;
+      padding-left: 60px;
+      padding-right: 60px;
+
+      &.show{
+        height: 100vh;
+          .navbar-nav {
+          &:nth-child(2) {
+            position: absolute;
+            bottom: 50px;
+            left: 60px;
+            .nav-item:first-child{
+              padding-right: 30px;
+            }
+            .nav-item:last-child{
+              padding-left: 30px;
+            }
+            svg{
+              width: 25px;
+              height: 25px;
+            }
+          }
+          
+          &:nth-child(3) {
+            position: absolute;
+            bottom: 50px;
+            right: 60px;
+            color: $branco;
+            .nav-item:first-child{
+              padding-right: 3vw;
+              .nav-link{
+                color: $branco;
+                padding-top: 4px;
+              }
+            }
+            .nav-item:last-child{
+              padding-left: 3vw;
+              .nav-link{
+                color: $branco;
+                padding-top: 4px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //Menu slim
+  &.scrolled{
+    position: fixed;
+    background-color: $primary;
+    top: 0;
+    padding: 5px 15px;
+    z-index: 2;
+
+    .navbar-brand img{
+      width: 140px;
+    }
+    .navbar-nav .nav-link:hover {
+      border-top-color: $branco
+    }
+    .hamburger{
+      margin-top: 5px;
+    }
+  }
+  
+}
+
+//Hero
+.jumbotron {
+  @extend .d-flex;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  align-items: flex-end;
+}

@@ -1,0 +1,64 @@
+/*
+=====================================================
+Meida Queries  991px
+=====================================================
+*/
+
+@media (min-width: 991px) {
+  .main-menu {
+
+    .navbar-brand img{
+      width:184.02px;
+      height: 67.02px;
+    }
+    .navbar-collapse{
+      padding-top: 0;
+    }
+    .nav-item{
+      font-size: 1rem;
+    }
+    .navbar-nav:first-child{
+      margin-bottom: 0;
+    }    
+    .navbar-nav{
+      .nav-link{
+        color: $white;
+        border-top: 3px solid transparent;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 12px;
+        &:hover{
+          border-top-color: $primary;
+        }
+      }
+
+      &:first-child {
+        .nav-item{
+          margin: 0 29.5px;
+          &:last-child{
+            margin-right: 0;
+          }
+        } 
+      }
+
+      &:nth-child(2){
+        margin: 0 40px;
+        .nav-link{
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+      }
+      .separator{
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+  //Hero
+  .jumbotron {
+    background-color: $dark;
+    min-height: 1080px;
+  }
+
+
+}
+// 991px
